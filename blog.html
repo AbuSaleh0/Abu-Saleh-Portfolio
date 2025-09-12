@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Abu Saleh — Portfolio</title>
+    <meta name="description" content="Read Abu Saleh's latest blog posts about web development, React, AWS, and programming tutorials.">
+    
+    <!-- Links -->
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to content -->
+    <a href="#content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header id="site-header" class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Abu Saleh</a>
+            </div>
+            
+            <nav aria-label="Primary" class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" aria-current="page">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="content" tabindex="-1">
+        <!-- Blog Section -->
+        <section id="blog" class="blog animate-on-scroll">
+            <div class="container">
+                <h1 class="animate-on-scroll">No Blog Posts</h1>
+                <!-- <div class="blog-posts">
+                    <article class="blog-post animate-on-scroll">
+                        <h2><a href="/blog/getting-started-with-react">Getting Started with React: A Beginner's Guide</a></h2>
+                        <p class="blog-meta">Published on January 15, 2024</p>
+                        <p>Learn the fundamentals of React and build your first component-based application. This comprehensive guide covers everything from setting up your development environment to creating interactive components.</p>
+                    </article>
+                    
+                    <article class="blog-post animate-on-scroll">
+                        <h2><a href="/blog/aws-serverless-deployment">Deploying Serverless Applications on AWS</a></h2>
+                        <p class="blog-meta">Published on September 28, 2024</p>
+                        <p>A comprehensive guide to deploying serverless applications using AWS Lambda and API Gateway. Discover how to build scalable, cost-effective applications in the cloud.</p>
+                    </article>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 Abu Saleh. All rights reserved.</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Footer">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="social-links">
+                    <a href="https://github.com/AbuSaleh0" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/abu-saleh-developer" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i> X</a>
+                </div>
+            </div>
+            
+            <div class="back-to-top">
+                <a href="#blog" aria-label="Back to top">↑ Back to Top</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JS HERE -->
+    <script src="main.js" defer></script>
+</body>
+</html>
