@@ -875,6 +875,12 @@ section h2 {
     grid-template-columns: 1fr;
   }
   
+  .project-image {
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
   .skills-grid {
     grid-template-columns: 1fr;
   }
