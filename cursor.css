@@ -1,0 +1,61 @@
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text);
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--text);
+  opacity: 0.5;
+  transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s;
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 1025px) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, .project-card, input, textarea, select, label {
+    cursor: none;
+  }
+}
+
+/* Hover state */
+body.cursor-hover .cursor-outline {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(var(--text), 0.1);
+  opacity: 0.8;
+  border-color: var(--accent);
+}
+
+/* Mobile/Touch devices: Hide custom cursor and restore default */
+@media (max-width: 1024px), (hover: none) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+  
+  body {
+    cursor: auto;
+  }
+  
+  a, button, .project-card, input, textarea, select, label {
+    cursor: pointer;
+  }
+}
