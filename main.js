@@ -1,4 +1,114 @@
+// ============================================
+// Developer Tools Protection
+// ============================================
+
+// Disable right-click context menu
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Disable keyboard shortcuts for developer tools
+document.addEventListener('keydown', (e) => {
+  // F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+I (Inspect)
+  if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+J (Console)
+  if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+Shift+C (Inspect Element)
+  if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+U (View Source)
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+    return false;
+  }
+  
+  // Ctrl+S (Save Page)
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// Detect if DevTools is open
+(function() {
+  const devtools = { open: false };
+  const threshold = 160;
+  
+  setInterval(() => {
+    if (window.outerWidth - window.innerWidth > threshold || 
+        window.outerHeight - window.innerHeight > threshold) {
+      if (!devtools.open) {
+        devtools.open = true;
+        // Redirect or show warning
+        document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;"><h1>Developer tools are not allowed!</h1></div>';
+      }
+    } else {
+      devtools.open = false;
+    }
+  }, 500);
+})();
+
+// Disable text selection
+document.addEventListener('selectstart', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Disable copy
+document.addEventListener('copy', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Disable cut
+document.addEventListener('cut', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Disable paste
+document.addEventListener('paste', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Console protection - clear console and disable logging
+(function() {
+  console.clear();
+  setInterval(() => {
+    console.clear();
+  }, 1000);
+  
+  // Override console methods
+  const disabledFn = () => {};
+  console.log = disabledFn;
+  console.warn = disabledFn;
+  console.error = disabledFn;
+  console.info = disabledFn;
+  console.debug = disabledFn;
+})();
+
+// ============================================
 // Theme Toggle
+// ============================================
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
