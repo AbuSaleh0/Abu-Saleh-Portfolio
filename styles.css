@@ -148,6 +148,36 @@ body {
   color: var(--accent);
 }
 
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  border: 2px solid var(--accent);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.btn-resume:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-resume i {
+  font-size: 0.85em;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -878,6 +908,31 @@ section h2 {
     border: none;
     border-top: 1px solid var(--border);
     border-radius: 0;
+  }
+
+  .btn-resume {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: var(--spacing-md) 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    color: var(--accent) !important;
+    font-size: var(--font-size-lg);
+    box-shadow: none;
+    transform: none;
+    letter-spacing: 0;
+  }
+
+  .btn-resume:hover {
+    background: var(--border);
+    padding-left: var(--spacing-md);
+    border-color: var(--border);
+    color: var(--accent) !important;
+    box-shadow: none;
+    transform: none;
   }
 
   .hero h1 {
